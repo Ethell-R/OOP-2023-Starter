@@ -41,12 +41,20 @@ public class DANI extends PApplet {
 
 	public void setup() {
 		colorMode(HSB);
+		loadFile("shakespere.txt");
+		printModel();
 
        
 	}
 
 	public void keyPressed() {
-
+		if (key == ' ') {
+			sonnet = writeSonnet();
+			for (int i = 0; i < sonnet.length; i++)
+			{
+				System.out.println(sonnet[i]);
+			}
+		}
 	}
 
 	float off = 0;
