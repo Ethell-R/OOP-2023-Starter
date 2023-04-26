@@ -6,7 +6,7 @@ public class Follow {
     private int count;
 
     public String getWord() {
-        return word;
+        return this.word;
     }
 
     public void setWord(String word) {
@@ -14,7 +14,7 @@ public class Follow {
     }
 
     public int getCount() {
-        return count;
+        return this.count;
     }
 
     public void setCount(int count) {
@@ -25,14 +25,14 @@ public class Follow {
         this.count++;
     }
 
-    public Follow(String word, int count) {
+    public Follow(String word) {
         this.word = word;
         this.count = 1;
     }
 
-    @Override
+
     public String toString() {
-        return "Follow [word=" + word + ", count=" + count + "]";
+        return word + "(" + count + ")";
     }
 
     

@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Word {
 
     private String word;
-    ArrayList<Follow> follows = new ArrayList<Follow>();
+    private ArrayList<Follow> follows;
 
     public String getWord() {
-        return word;
+        return this.word;
     }
 
     public void setWord(String word) {
@@ -16,16 +16,16 @@ public class Word {
     }
 
     public ArrayList<Follow> getFollow() {
-        return follows;
+        return this.follows;
     }
 
     public void setFollow(ArrayList<Follow> follows) {
         this.follows = follows;
     }
 
-    public Word(String word, ArrayList<Follow> follows) {
+    public Word(String word) {
         this.word = word;
-        this.follows = follows;
+        this.follows = new ArrayList<Follow>();
     }
 
     public String toString() {
@@ -44,8 +44,8 @@ public class Word {
                 return;
             }
         }
-        follows.add(new Follow(word, 0));
-    }  
+        follows.add(new Follow(word));        
+    }         
     
 }
 

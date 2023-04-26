@@ -21,7 +21,7 @@ public class DANI extends PApplet {
 
 	public void loadFile(String filename)
 	{
-		String[] lines = loadStrings("shakespere.txt"); // Load a text file into a String array
+		String[] lines = loadStrings(filename); // Load a text file into a String array
  		for (String line : lines) {
 			String[] words = split(line, ' '); // Split a string into an array of words
  			for (int i = 0; i < words.length; i++)
@@ -94,6 +94,7 @@ public class DANI extends PApplet {
 			{
 				System.out.println(sonnet[i]);
 			}
+			redraw();
 		}
 	}
 
@@ -106,6 +107,14 @@ public class DANI extends PApplet {
 		noStroke();
 		textSize(20);
         textAlign(CENTER, CENTER);
-        
+		if (sonnet != null) {
+			float x = width / 2;
+			float y = height / 2;
+			float lineHeight = textAscent() + textDescent();
+			for (int i = 0; i < sonnet.length; i++) {
+				text(sonnet[i], x, y);
+				y += lineHeight;
+			}
+		}
 	}
 }
