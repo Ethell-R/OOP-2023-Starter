@@ -33,8 +33,6 @@ public class Follow {
 
     public String toString() {
         return word + "(" + count + ")";
-    }
-
-    
+    }    
     
 }

@@ -36,7 +36,6 @@ public class Word {
         return str;
     }
 
-
     public void addFollow(String word) {
         for (Follow follows : follows) {
             if (follows.getWord().equals(word)) {
